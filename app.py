@@ -1,7 +1,8 @@
 import streamlit as str
 import pickle
 import numpy as np
-model=pickle.load(open('model.pkl','rb'))
+with open('model.pkl', 'rb') as file:
+    model = pickle.load(file)
 
 
 def predict_forest(oxygen,humidity,temperature):
